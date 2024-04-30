@@ -9,8 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.microservice.productservice.common.constant.UrlConstant.API_URL;
+import static com.microservice.productservice.common.constant.UrlConstant.PRODUCT_URL;
+
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping(API_URL + PRODUCT_URL)
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
