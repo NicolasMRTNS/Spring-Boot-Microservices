@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @Data
 @Builder
-public class Product {
+public class Product implements IAppEntity{
     @Id
     private String id;
     private String name;

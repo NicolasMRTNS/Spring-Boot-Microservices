@@ -5,9 +5,9 @@ import com.microservice.productservice.model.Product;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductMapperImpl implements ProductMapper {
+public class ProductMapperImpl implements IMapper<Product, ProductResponse> {
     @Override
-    public ProductResponse toProductResponse(Product product) {
+    public ProductResponse toDto(Product product) {
         return ProductResponse.builder()
                 .id(product.getId())
                 .name(product.getName())
